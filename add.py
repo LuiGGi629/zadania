@@ -1,12 +1,12 @@
+from itertools import zip_longest
+
+
 def add(*matrices):
     """Add corresponding numbers in given 2-D matrices."""
-    matrix_shape = {
-        tuple(len(r) for r in matrix)
-        for matrix in matrices
-    }
-    if len(matrix_shape) > 1:
+    try:
+        return [
+            [sum(values) for values in zip_longest(*rows)]
+            for rows in zip_longest(*matrices)
+        ]
+    except TypeError as e:
         raise ValueError("Given matrices are not the same size.")
-    return [
-        [sum(values) for values in zip(*rows)]
-        for rows in zip(*matrices)
-    ]
