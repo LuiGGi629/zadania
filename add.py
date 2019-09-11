@@ -4,9 +4,6 @@ def add(*matrices):
     for rows in zip(*matrices):
         row = []
         for values in zip(*rows):
-            total = 0
-            for num in values:
-                total += num
-            row.append(total)
+            row.append(sum(values))
         combined.append(row)
     return combined
