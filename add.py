@@ -1,6 +1,12 @@
-def add(matrix1, matrix2):
+def add(*matrices):
     """Add corresponding numbers in given 2-D matrices."""
-    return [
-        [n + m for n, m in zip(row1, row2)]
-        for row1, row2 in zip(matrix1, matrix2)
-    ]
+    combined = []
+    for rows in zip(*matrices):
+        row = []
+        for values in zip(*rows):
+            total = 0
+            for num in values:
+                total += num
+            row.append(total)
+        combined.append(row)
+    return combined
