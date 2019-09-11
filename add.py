@@ -1,8 +1,12 @@
-def add(matrix1, matrix2):
+def add(*matrices):
     """Add corresponding numbers in given 2-D matrices."""
-    if [len(r) for r in matrix1] != [len(r) for r in matrix2]:
+    matrix_shape = {
+        tuple(len(r) for r in matrix)
+        for matrix in matrices
+    }
+    if len(matrix_shape) > 1:
         raise ValueError("Given matrices are not the same size.")
     return [
-        [n + m for n, m in zip(row1, row2)]
-        for row1, row2 in zip(matrix1, matrix2)
+        [sum(values) for values in zip(*rows)]
+        for rows in zip(*matrices)
     ]
