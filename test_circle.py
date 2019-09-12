@@ -33,7 +33,7 @@ class CircleTests(unittest.TestCase):
         circle.radius = 1
         self.assertEqual(repr(circle), 'Circle(1)')
 
-    @unittest.expectedFailure
+    # @unittest.expectedFailure
     def test_diameter_and_area_change_based_on_radius(self):
         circle = Circle(2)
         self.assertEqual(circle.diameter, 4)
