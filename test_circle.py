@@ -51,7 +51,7 @@ class CircleTests(unittest.TestCase):
         with self.assertRaises(AttributeError):
             circle.area = 3
 
-    @unittest.expectedFailure
+    # @unittest.expectedFailure
     def test_no_negative_radius(self):
         circle = Circle(2)
         with self.assertRaises(ValueError) as context:
