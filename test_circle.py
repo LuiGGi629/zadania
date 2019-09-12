@@ -41,7 +41,7 @@ class CircleTests(unittest.TestCase):
         self.assertEqual(circle.diameter, 6)
         self.assertEqual(circle.area, math.pi * 9)
 
-    @unittest.expectedFailure
+    # @unittest.expectedFailure
     def test_diameter_changeable_but_area_not(self):
         circle = Circle(2)
         self.assertEqual(circle.diameter, 4)
