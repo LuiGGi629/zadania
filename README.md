@@ -20,3 +20,8 @@
 ## Starting with a vowel
 
 3. Function that accepts a list of names and returns a new list containing all names that start with a vowel.
+
+
+## Power List By Index
+
+4. Function that accepts a list of numbers and returns a new list that contains each number raised to the i-th power where i is the index of that number in the given list.
