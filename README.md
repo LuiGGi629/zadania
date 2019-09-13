@@ -35,3 +35,8 @@
 ## Reverse Difference
 
 6. Function that accepts a list of numbers and returns a new copy of the list with the reverse of the list subtracted.
+
+
+## Transpose
+
+7. Function that accepts a list of lists and returns the transpose of the list of lists.
