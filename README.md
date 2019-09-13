@@ -40,3 +40,10 @@
 ## Transpose
 
 7. Function that accepts a list of lists and returns the transpose of the list of lists.
+
+
+## Factors
+
+8. The function get_factors returns the factors of a given number.
+
+
