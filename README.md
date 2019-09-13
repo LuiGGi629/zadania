@@ -30,3 +30,8 @@
 ## Flatten a Matrix
 
 5. Funtion that will take a matrix (a list of lists) and return a flattened version of the matrix.
+
+
+## Reverse Difference
+
+6. Function that accepts a list of numbers and returns a new copy of the list with the reverse of the list subtracted.
