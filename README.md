@@ -50,3 +50,8 @@
 ## Pythagorean Triples
 
 9. Function that takes a number and returns a list of tuples of 3 integers where each tuple is a Pythagorean triple, and the integers are all less then the input number. A Pythagorean triple is a group of 3 integers a, b, and c, such that they satisfy the formula a**2 + b**2 = c**2.
+
+
+## Primality
+
+10. Funtion that returns True if a number is prime and False otherwise.
