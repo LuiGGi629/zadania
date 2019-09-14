@@ -55,3 +55,8 @@
 ## Primality
 
 10. Funtion that returns True if a number is prime and False otherwise.
+
+
+## All Together
+
+11. Function that takes any number of iterables and strings them together. 
