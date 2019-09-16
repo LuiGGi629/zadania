@@ -10,7 +10,7 @@ words = {
 
 def transliterate(sentence):
     """Return a transliterated version of the given sentence."""
-    transliterated = []
-    for word in sentence.split():
-        transliterated.append(words[word])
-    return " ".join(transliterated)
+    return " ".join(
+            words[word]
+            for word in sentence.split()
+    )
