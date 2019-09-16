@@ -34,6 +34,14 @@ class InterleaveTests(unittest.TestCase):
         out = [1, 1, 2, 4, 3, 9, 4, 16]
         self.assertIterableEqual(interleave(in1, in2), out)
 
+    def test_response_is_iterator(self):
+        in1 = [1, 2, 3]
+        in2 = [4, 5, 6]
+        output = interleave(in1, in2)
+        self.assertEqual(iter(output), iter(output))
+        list(output)
+        self.assertEqual(list(output), [])
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
