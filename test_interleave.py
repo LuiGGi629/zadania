@@ -8,7 +8,7 @@ class InterleaveTests(unittest.TestCase):
         self.assertEqual(list(iterable1), list(iterable2))
 
     def test_empty_lists(self):
-        self.assertIterableEqual(interleave([], [], []))
+        self.assertIterableEqual(interleave([], []), [])
 
     def test_single_item_each(self):
         self.assertIterableEqual(interleave([1], [2]), [1, 2])
