@@ -16,6 +16,9 @@ class ParseRangesTests(unittest.TestCase):
         self.assertEqual(list(parse_ranges("6-9,0-0,20-23,66-69")),
                          [6, 7, 8, 9, 0, 20, 21, 22, 23, 66, 67, 68, 69])
 
+    def test_is_iterator(self):
+        self.assertEqual(next(parse_ranges("1-4")), 1)
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
