@@ -1,8 +1,10 @@
 def parse_ranges(ranges_string):
     """Return a list of numbers corresponding to number ranges in a string."""
-    numbers = []
+    pairs = []
     for group in ranges_string.split(","):
-        start, stop = group.split("-")
+        pairs.append(group.split("-"))
+    numbers = []
+    for start, stop in pairs:
         for num in range(int(start), int(stop) + 1):
             numbers.append(num)
     return numbers
