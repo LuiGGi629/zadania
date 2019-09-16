@@ -65,3 +65,8 @@
 ## Interleave
 
 12. Function that accepts two iterables and returns a generator object with each of the given items "interleaved" (item 0 from iterable 1, then item 0 from iterable 2, then item 1 from iterable 1, and so on).
+
+
+## Transliteration
+
+13. Function that takes a string in one language and transliterates each word into another language, returning the resulting string.
