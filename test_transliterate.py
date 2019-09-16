@@ -5,7 +5,7 @@ from transliterate import transliterate
 class TransliterateTests(unittest.TestCase):
     """Tests for transliterate."""
     def test_rat(self):
-        self.assertEqual(transliterate("rato"), "cat")
+        self.assertEqual(transliterate("rato"), "rat")
 
     def test_the_rat(self):
         self.assertEqual(transliterate("el rato"), "the rat")
