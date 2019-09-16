@@ -70,3 +70,8 @@
 ## Transliteration
 
 13. Function that takes a string in one language and transliterates each word into another language, returning the resulting string.
+
+
+## Parse Number Ranges
+
+14. Function that accepts a string containing ranges of numbers and returns a generator of the actual numbers contained in the ranges. The range numbers are inclusive.
