@@ -75,3 +75,8 @@
 ## Parse Number Ranges
 
 14. Function that accepts a string containing ranges of numbers and returns a generator of the actual numbers contained in the ranges. The range numbers are inclusive.
+
+
+## Primes Over
+
+15. Function that returns a first prime number over a given number.
