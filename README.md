@@ -80,3 +80,8 @@
 ## Primes Over
 
 15. Function that returns a first prime number over a given number.
+
+
+## Anagrams
+
+16. Function that accepts two strings and returns True if the two strings are anagrams of each other. The function should also ignore spaces and punctuation.
