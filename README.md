@@ -90,3 +90,8 @@
 ## Flipped Dictionary
 
 17. Function that flips dictionary keys and values.
+
+
+## ASCII Strings
+
+18. Function that accepts a list of strings and returns a dictionary containing the strings as keys and a list of corresponding ASCII characters codes as values.
