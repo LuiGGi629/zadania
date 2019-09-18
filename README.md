@@ -95,3 +95,8 @@
 ## ASCII Strings
 
 18. Function that accepts a list of strings and returns a dictionary containing the strings as keys and a list of corresponding ASCII characters codes as values.
+
+
+## Double-valued Dictionary
+
+19. Function that accepts a list of three-item tuples and returns a dictionary where the keys are the first item of each tuple and the values are a two-tuple of the remaining two items of each input tuple.
