@@ -110,3 +110,8 @@
 ## All Factors
 
 21. Function that takes a set of numbers and makes a dictionary containing the numbers as keys and a list of factors as values
+
+
+## Matrix From String
+
+22. Function that accepts a string and returns a list of lists of integers (found in the string).
