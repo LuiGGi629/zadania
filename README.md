@@ -100,3 +100,8 @@
 ## Double-valued Dictionary
 
 19. Function that accepts a list of three-item tuples and returns a dictionary where the keys are the first item of each tuple and the values are a two-tuple of the remaining two items of each input tuple.
+
+
+## Multi-valued Dictionary 
+
+20. Edit the function dict_from_tuple by starting with the code from dict_from_tuple function, above, and modify it to accept a list of tuples of any length and return a dictionary which uses the first item of each tuple as keys and all subsequent items as values.
