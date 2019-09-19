@@ -105,3 +105,8 @@
 ## Multi-valued Dictionary 
 
 20. Edit the function dict_from_tuple by starting with the code from dict_from_tuple function, above, and modify it to accept a list of tuples of any length and return a dictionary which uses the first item of each tuple as keys and all subsequent items as values.
+
+
+## All Factors
+
+21. Function that takes a set of numbers and makes a dictionary containing the numbers as keys and a list of factors as values
