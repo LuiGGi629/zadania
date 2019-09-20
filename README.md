@@ -121,12 +121,12 @@
 
 23. Implementation of the Atbash Cipher, an ancient encryption system created in the Middle East. 
 
-The Atbash Cipher is a simple substitution cipher that relies on transposing all the letters in the alphabet such that resulting aplhabet is backwards. The first letter is replace with the last letter, the second wih the second-last, and so on.
+The Atbash Cipher is a simple substitution cipher that relies on transposing all the letters in the alphabet such that resulting aplhabet is backwards. The first letter is replaced with the last letter, the second wih the second-last, and so on.
 
 An Atbash Cipher for the Latin alphabet would be as follows:
 
-Plain:  abcdefghijklmnopqrstuvwxyz
-Cipher: zyxwvutsrqponmlkjihgfedcba
+- Plain: abcdefghijklmnopqrstuvwxyz
+- Cipher: zyxwvutsrqponmlkjihgfedcba
 
 Ciphertext is written out in groups of fixed length, the traditional group size being 5 letters, and punctuation is excluded. This is to make it harder to guess things based on word boundaries.
 
