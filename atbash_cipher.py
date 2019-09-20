@@ -10,3 +10,16 @@ def decode(string):
         for char in string.lower()
         if char.isalnum()
     )
+
+
+def chunkify(string, n):
+    """Return generator of n-letter word groups in string."""
+    return (
+        string[i:(i + n)]
+        for i in range(0, len(string), n)
+    )
+
+
+def encode(string):
+    """Decode each letter and group into 5-letter words."""
+    return " ".join(chunkify(decode(string), 5))
