@@ -133,3 +133,8 @@ Ciphertext is written out in groups of fixed length, the traditional group size 
 - Encoding test gives gvhg
 - Decoding gvhg gives test
 - Decoding gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt gives thequickbrownfoxjumpsoverthelazydog
+
+
+## Memory-efficient CSV
+
+24. Function that accepts a file object which contains a CSV file (including a header row) and returns a list of namedtuples representing each row.
