@@ -33,8 +33,8 @@ class ParseCSVTests(unittest.TestCase):
         self.assertEqual(row1.col1, "1")
         self.assertEqual(row1.col2, "2")
         self.assertEqual(row1.more_data, "3")
-        self.assertEqual(row1, "1", "2", "3")
-        self.assertEqual(row2, "a,b", "c\td", "e f")
+        self.assertEqual(row1, ("1", "2", "3"))
+        self.assertEqual(row2, ("a,b", "c\td", "e f"))
 
     def test_state_capitals(self):
         with open("data/us-state-capitals.csv") as capitals_file:
