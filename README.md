@@ -138,3 +138,11 @@ Ciphertext is written out in groups of fixed length, the traditional group size 
 ## Memory-efficient CSV
 
 24. Function that accepts a file object which contains a CSV file (including a header row) and returns a list of namedtuples representing each row.
+
+
+## Deal Cards
+
+25.
+- get_cards: returns a list of namedtuples representing cards. Each card should have suit and rank.
+- shuffle_cards: shuffles a deck in-place.
+- deal_cards: accepts a number as its argument, removes the given number of cards from the end of the list and returns them.
