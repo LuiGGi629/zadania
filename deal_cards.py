@@ -16,4 +16,5 @@ def shuffle_cards(deck):
 
 
 def deal_cards(deck, count=2):
-    """Remove the given number of cards from the deck and returns them."""
+    """Removes the given number of cards from the deck and returns them."""
+    return [deck.pop() for card in range(count)]
