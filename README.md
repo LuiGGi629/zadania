@@ -146,3 +146,8 @@ Ciphertext is written out in groups of fixed length, the traditional group size 
 - get_cards: returns a list of namedtuples representing cards. Each card should have suit and rank.
 - shuffle_cards: shuffles a deck in-place.
 - deal_cards: accepts a number as its argument, removes the given number of cards from the end of the list and returns them.
+
+
+## Coprime
+
+26. Funtion that returns True if given numbers are coprime and False otherwise.
