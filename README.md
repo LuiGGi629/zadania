@@ -150,4 +150,12 @@ Ciphertext is written out in groups of fixed length, the traditional group size 
 
 ## Coprime
 
-26. Funtion that returns True if given numbers are coprime and False otherwise.
+26. Funtion that determines whether two numbers are coprime (their only common divisor is 1).
+
+
+## Compact
+
+27. Function that accepts a sequence (a list for example) and returns a new iterable (anything you can loop over) with adjacent dupicate values removed.
+
+- 
+- 
