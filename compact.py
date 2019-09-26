@@ -1,10 +1,11 @@
-def compact(sequence):
+def compact(iterable):
     """Return iterable with adjacent duplicate values removed."""
+    sequence = list(iterable)
+    # converting incoming iterable to a list
     deduplicated = []
-    # zip together the original sequence with itself shifted by one
-    # so that the each item can compare itself with the one before
-    for item, previous in zip(sequence, [object(), *sequence]):
-        # *"unpacking" each of the items into new list, after object()
-        if item != previous:
+    # this isn't very efficient -> creating a new list
+    # just to loop over it once and discard it
+    for i, item in enumerate(sequence):
+        if i == 0 or item != sequence[i-1]:
             deduplicated.append(item)
     return deduplicated
