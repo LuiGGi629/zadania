@@ -150,7 +150,7 @@ Ciphertext is written out in groups of fixed length, the traditional group size 
 
 ## Coprime
 
-26. Funtion that determines whether two numbers are coprime (their only common divisor is 1).
+26. Funtion that determines whether two numbers are coprime (their only common divisor is 1)
 
 
 ## Compact

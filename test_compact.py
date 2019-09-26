@@ -8,7 +8,7 @@ class CompactTests(unittest.TestCase):
         self.assertEqual(list(iterable1), list(iterable2))
 
     def test_no_duplicates(self):
-        self.assertIterableEqual(compact([1, 2, 3], [1, 2, 3]))
+        self.assertIterableEqual(compact([1, 2, 3]), [1, 2, 3])
 
     def test_adjacent_duplicates(self):
         self.assertIterableEqual(compact([1, 1, 2, 2, 3]), [1, 2, 3])
