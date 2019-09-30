@@ -159,3 +159,13 @@ Ciphertext is written out in groups of fixed length, the traditional group size 
 
 - make sure to accept any iterable as an agrument, not just a sequence (can't use index look-ups for that)
 - make sure to return an iterator (for example a generator) from compact function instead of a list.
+
+
+## Tail
+
+28. Function that takes a sequence (like a list, string, or tuple) and a number n and returns the last n elements from the given sequence, as a list.
+
+- make tail function return an empty list for negative values of n
+- make sure tail function works with any iterable, not just sequences
+- make sure to not loop at all if n is 0 or negative
+- make tail function relatively memory efficient (while looping over a very long iterable, don't store the entire thing in memory).
