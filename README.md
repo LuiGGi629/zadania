@@ -155,7 +155,7 @@ Ciphertext is written out in groups of fixed length, the traditional group size 
 
 ## Compact
 
-27. Function that accepts a sequence (a list for example) and returns a new iterable (anything you can loop over) with adjacent dupicate values removed.
+27. Function that accepts a sequence (a list for example) and returns a new iterable (anything you can loop over) with adjacent duplicate values removed.
 
 - make sure to accept any iterable as an agrument, not just a sequence (can't use index look-ups for that)
 - make sure to return an iterator (for example a generator) from compact function instead of a list.
