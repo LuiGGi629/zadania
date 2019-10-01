@@ -1,5 +1,6 @@
-def tail(sequence, n):
+def tail(iterable, n):
     """Return the last n items of given sentence."""
+    sequence = list(iterable)
     if n <= 0:
         return []
-    return list(sequence[-n:])
+    return sequence[-n:]
