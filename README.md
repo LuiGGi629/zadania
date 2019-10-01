@@ -169,3 +169,11 @@ Ciphertext is written out in groups of fixed length, the traditional group size 
 - make sure tail function works with any iterable, not just sequences
 - make sure to not loop at all if n is 0 or negative
 - make tail function relatively memory efficient (while looping over a very long iterable, don't store the entire thing in memory).
+
+
+## Count
+
+29. Function that accepts a string and returns a mapping (a dictionary or dictionary-like structure) that has words as the keys and the number of times each word was seen as the values.
+
+- make sure count function works well with mixed case words
+- try to get it to ignore punctuation outside of words
