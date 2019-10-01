@@ -4,5 +4,8 @@ def tail(iterable, n):
     if n <= 0:
         return []
     for item in iterable:
-        items = [*items[-(n-1):], item]
+        if n == 1:
+            items = [item]
+        else:
+            items = [*items[-n+1:], item]
     return items
