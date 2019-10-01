@@ -29,6 +29,14 @@ class TailTests(unittest.TestCase):
         self.assertEqual(tail(nums, -1), [])
         self.assertEqual(tail((), -9), [])
 
+    def test_iterator(self):
+        nums = (n ** 2 for n in [1, 2, 3, 4])
+        self.assertEqual(tail(nums, -1), [])  # no looping when n is negative
+        self.assertEqual(tail(nums, 2), [9, 16])  # generator consumed
+        self.assertEqual(list(nums), [])  # nums generator is now empty
+        self.assertEqual(tail(nums, 0), [])  # n=0 with empty generator
+        self.assertEqual(tail(nums, 1), [])  # n=1 with empty generator
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
