@@ -24,6 +24,11 @@ class TailTests(unittest.TestCase):
     def test_tuple(self):
         self.assertEqual(tail((1, 2, 3), 3), [1, 2, 3])
 
+    def test_negative_n(self):
+        nums = [1, 2, 3, 4]
+        self.assertEqual(tail(nums, -1), [])
+        self.assertEqual(tail((), -9), [])
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
