@@ -1,7 +1,9 @@
+from collections import defaultdict
+
+
 def count_words(string):
     """Return the number of items each word occurs in the string."""
-    count = {}
+    count = defaultdict(int)
     for word in string.split():
-        count.setdefault(word, 0)
         count[word] += 1
     return count
