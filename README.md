@@ -177,3 +177,12 @@ Ciphertext is written out in groups of fixed length, the traditional group size 
 
 - make sure count function works well with mixed case words
 - try to get it to ignore punctuation outside of words
+
+
+## Normalize CSV
+
+
+30. Program that turns a pipe-delimited file into a comma-delimited.
+
+- Allow the input delitmiter and quote character to be optionally specified.
+- Automatically detect the delimiter if an in-delimiter values isn't supplied (don't assume it's pipe and quote)
