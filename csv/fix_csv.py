@@ -2,13 +2,10 @@
 import sys
 import csv
 
-old_filename = sys.argv[1]
-new_filename = sys.argv[2]
+old_filename, new_filename = sys.argv[1:]
 
 with open(old_filename, newline="") as old_file:
-    reader = csv.reader(old_file, delimiter="|")
-    rows = [line for line in reader]
+    rows = list(csv.reader(old_file, delimiter="|"))
 
 with open(new_filename, mode="wt", newline="") as new_file:
-    writer = csv.writer(new_file)
-    writer.writerows(rows)
+    csv.writer(new_file).writerows(rows)
