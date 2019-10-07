@@ -1,21 +1,14 @@
 #! /usr/local/bin/python3
 import sys
+import csv
 
 old_filename = sys.argv[1]
 new_filename = sys.argv[2]
 
-old_file = open(old_filename)
+with open(old_filename, newline="") as old_file:
+    reader = csv.reader(old_file, delimiter="|")
+    rows = [line for line in reader]
 
-rows = [
-    line.split("|")
-    for line in old_file.read().splitlines()
-]
-
-new_file = open(new_filename, mode="wt", newline="\r\n")
-print("\n".join(
-    ",".join(row)
-    for row in rows
-), file=new_file)
-
-old_file.close()
-new_file.close()
+with open(new_filename, mode="wt", newline="") as new_file:
+    writer = csv.writer(new_file)
+    writer.writerows(rows)
