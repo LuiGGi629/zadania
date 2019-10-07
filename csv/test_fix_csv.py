@@ -78,6 +78,70 @@ class FixCSVTests(unittest.TestCase):
             with self.assertRaises(BaseException):
                 run_program("fix_csv.py", args=[old, new, old])
 
+    def test_in_delimiter_and_in_quote(self):
+        old_contents = dedent("""
+            2012 Lexus "LFA"
+            2009 GMC 'Yukon XL 1500'
+            1995 "Mercedes-Benz" C-Class
+        """).lstrip()
+        expected1 = dedent("""
+            2012,Lexus,LFA
+            2009,GMC,'Yukon,XL,1500'
+            1995,Mercedes-Benz,C-Class
+        """).lstrip()
+        expected2 = dedent('''
+            2012,Lexus,"""LFA"""
+            2009,GMC,Yukon XL 1500
+            1995,"""Mercedes-Benz""",C-Class
+        ''').lstrip()
+        with make_file(old_contents) as old, make_file("") as new:
+            args = [old, new, "--in-delimiter= "]
+            run_program("fix_csv.py", args=args)
+            with open(new) as new_file:
+                self.assertEqual(expected1, new_file.read())
+            args = ["--in-delimiter= ", "--in-quote='", old, new]
+            run_program("fix_csv.py", args=args)
+            with open(new) as new_file:
+                self.assertEqual(expected2, new_file.read())
+
+    def test_autodetect_input_format(self):
+        contents1 = dedent("""
+            '2012' 'Lexus' 'LFA'
+            '2009' 'GMC' 'Yukon XL 1500'
+            '1995' 'Mercedes-Benz' 'C-Class'
+        """).lstrip()
+        expected1 = dedent("""
+            2012,Lexus,LFA
+            2009,GMC,Yukon XL 1500
+            1995,Mercedes-Benz,C-Class
+        """).lstrip()
+        with make_file(contents1) as old, make_file("") as new:
+            run_program("fix_csv.py", args=[old, new])
+            with open(new) as new_file:
+                self.assertEqual(expected1, new_file.read())
+        contents2 = dedent("""
+            "02"\t"Waylon Jennings"\t"Honky Tonk Heroes (Like Me)"\t"3:29"
+            "04"\t"Kris Kristofferson"\t"To Beat The Devil"\t"4:05"
+            "11"\t"Johnny Cash"\t"Folsom Prison Blues"\t"2:51"
+            "13"\t"Billy Joe Shaver"\t"Low Down Freedom"\t"2:53"
+            "21"\t"Hank Williams III"\t"Mississippi Mud"\t"3:32"
+            "22"\t"David Allan Coe"\t"Willie, Waylon, And Me"\t"3:24"
+            "24"\t"Bob Dylan"\t"House Of The Risin' Sun"\t"5:20"
+        """).lstrip()
+        expected2 = dedent("""
+            02,Waylon Jennings,Honky Tonk Heroes (Like Me),3:29
+            04,Kris Kristofferson,To Beat The Devil,4:05
+            11,Johnny Cash,Folsom Prison Blues,2:51
+            13,Billy Joe Shaver,Low Down Freedom,2:53
+            21,Hank Williams III,Mississippi Mud,3:32
+            22,David Allan Coe,"Willie, Waylon, And Me",3:24
+            24,Bob Dylan,House Of The Risin' Sun,5:20
+        """).lstrip()
+        with make_file(contents2) as old, make_file("") as new:
+            run_program("fix_csv", args=[old, new])
+            with open(new) as new_file:
+                self.assertEqual(expected2, new_file.read())
+
 
 class DummyException(Exception):
     """No code will ever raise this exception."""
