@@ -1,11 +1,14 @@
 #! /usr/local/bin/python3
-import sys
+from argparse import ArgumentParser
 import csv
 
-old_filename, new_filename = sys.argv[1:]
+parser = ArgumentParser()
+parser.add_argument("old_filename")
+parser.add_argument("new_filename")
+args = parser.parse_args()
 
-with open(old_filename, newline="") as old_file:
+with open(args.old_filename, newline="") as old_file:
     rows = list(csv.reader(old_file, delimiter="|"))
 
-with open(new_filename, mode="wt", newline="") as new_file:
+with open(args.new_filename, mode="wt", newline="") as new_file:
     csv.writer(new_file).writerows(rows)
