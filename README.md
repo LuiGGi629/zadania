@@ -181,8 +181,12 @@ Ciphertext is written out in groups of fixed length, the traditional group size 
 
 ## Normalize CSV
 
-
 30. Program that turns a pipe-delimited file into a comma-delimited.
 
 - Allow the input delitmiter and quote character to be optionally specified.
 - Automatically detect the delimiter if an in-delimiter values isn't supplied (don't assume it's pipe and quote)
+
+
+## Get Earliest
+
+31. Function that takes two strings representing dates and returns the string that represents the earliest point in time. The strings are in the US-specific MM/DD/YYYY format... just to make things harder. Note that the month, year, and day will always be represented by 2, 4, and 2 digits respectively.
