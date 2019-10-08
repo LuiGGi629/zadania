@@ -138,7 +138,7 @@ class FixCSVTests(unittest.TestCase):
             24,Bob Dylan,House Of The Risin' Sun,5:20
         """).lstrip()
         with make_file(contents2) as old, make_file("") as new:
-            run_program("fix_csv", args=[old, new])
+            run_program("fix_csv.py", args=[old, new])
             with open(new) as new_file:
                 self.assertEqual(expected2, new_file.read())
 
