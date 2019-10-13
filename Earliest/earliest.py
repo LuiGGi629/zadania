@@ -1,10 +1,12 @@
-import re
+from datetime import datetime
 
 
-def get_earliest(date1, date2):
+def get_earliest(string1, string2):
     """Return earlies of two MM/DD/YYYY-formatted date strings."""
-    DATE_RE = re.compile(r'^(\d{2})/(\d{2})/(\d{4}$)')
-    (month1, day1, year1) = DATE_RE.search(date1).groups()
-    (month2, day2, year2) = DATE_RE.search(date2).groups()
+    date1 = datetime.strptime(string1, "%m/%d/%Y")
+    date2 = datetime.strptime(string2, "%m/%d/%Y")
 
-    return date1 if (year1, month1, day1) < (year2, month2, day2) else date2
+    if date1 < date2:
+        return string1
+    else:
+        return string2
